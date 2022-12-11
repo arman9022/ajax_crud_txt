@@ -1,0 +1,14 @@
+Create a new Database & Change ENV in laravel 
+
+php artisan make:model Product -m
+
+    public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->double('price');
+            $table->timestamps();
+        });
+    }
+php artisan migrate
